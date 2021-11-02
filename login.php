@@ -33,8 +33,8 @@ $user = new User();
     <div class="all" style="background: url(<?php echo $settings->loginimg; ?>); background-position: center right;">
         <form style="background: <?php echo $settings->background ?>" action="api/login.php" method="POST" class="left">
             <h1>Login</h1>
-            <input type="email" name="email" placeholder="email">
-            <input type="password" name="password" placeholder="password">
+            <input type="email" name="email" placeholder="email" placeholder="Email">
+            <input type="password" name="password" placeholder="password" placeholder="Parola">
             <input type="submit" name="submit" value="Submit">
             <a href="register.php">Nu ai cont? Înregistrează-te </a>
         </form>

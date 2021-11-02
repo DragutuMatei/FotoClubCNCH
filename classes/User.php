@@ -24,7 +24,7 @@ class User
     public function create($fields = array())
     {
         if (!$this->_db->insert("users", $fields)) {
-            throw new Exception("meci mai prst");
+            throw new Exception("NU AI INTRODUS CORECT DATELE");
         }
     }
 

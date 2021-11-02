@@ -32,13 +32,18 @@ $user = new User();
     <div class="all" style="background: url(<?php echo $settings->loginimg; ?>); background-position: center right;">
         <form style="background: <?php echo $settings->background ?>" class="left" action="api/register.php" method="POST">
             <h1>Regiter</h1>
-            <input type="text" name="username">
-            <input type="email" name="email">
-            <input type="password" name="password1">
-            <input type="password" name="password2">
+            <input type="text" name="username" placeholder="Username">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password1" placeholder="Parola">
+            <input type="password" name="password2" placeholder="Rescrie parola">
             <input type="hidden" name="salt" value="<?php echo time(); ?>">
             <input type="submit" name="submit" value="Submit">
             <a href="login.php">Ai cont? Conectează-te</a>
+            <?php
+            if (isset($_GET['parole']) && $_GET['parole'] == "false") {
+                echo "<h1>Ai gresit parolele!</h1>";
+            }
+            ?>
         </form>
     </div>
 

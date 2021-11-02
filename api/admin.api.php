@@ -14,6 +14,6 @@ if (isset($_POST['submit'])) {
 
 if (isset($_POST['sezon'])) {
     $user = new User();
-    $user->deleteSezon(Input::get("sezon"));
-    Redirect::to("../admin.php");
+    $user->deleteSezon(intval(Input::get("sezon")));
+    // Redirect::to("../admin.php");
 }

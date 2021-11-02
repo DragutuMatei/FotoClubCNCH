@@ -115,10 +115,13 @@ class User
         $sezon = $this->_db->get("sezoane", array("id", "=", $id));
         $sezon = $sezon->first();
 
+        echo $sezon->tema . "<br>";
+
         $posts = $this->_db->get("posts", array("sezon", "=", $sezon->tema));
         $posts = $posts->results();
 
         foreach ($posts as $post) {
+            echo $post->id . "<br>";
             $this->_db->delete("posts", array("id", "=", $post->id));
         }
 

@@ -41,7 +41,7 @@ $user = new User();
             <a href="login.php">Ai cont? Conectează-te</a>
             <?php
             if (isset($_GET['parole']) && $_GET['parole'] == "false") {
-                echo "<h1>Ai gresit parolele!</h1>";
+                echo "<h2 style='color: #ff0033;'>Ai gresit parolele!</h2>";
             }
             ?>
         </form>

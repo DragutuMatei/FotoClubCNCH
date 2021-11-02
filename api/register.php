@@ -19,6 +19,6 @@ if (isset($_POST['submit'])) {
             $e->getMessage();
         }
     } else {
-        Redirect::to("../login.php?parole=false");
+        Redirect::to("../register.php?parole=false");
     }
 }

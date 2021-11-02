@@ -223,7 +223,7 @@ if (!Admin::hasAccess()) {
             }
             ?>
         </select>
-        <input type="submit" name="sezon" value="submit">
+        <input type="submit" name="sezonsubmit" value="submit">
 
     </form>
 

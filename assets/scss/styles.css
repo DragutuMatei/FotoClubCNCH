@@ -488,7 +488,7 @@ button {
   margin: 20px;
   width: 100vw;
   max-width: 500px;
-  border-radius: calc(40px);
+  border-radius: 40px 0 0 0;
   overflow: hidden;
   text-decoration: none;
 }
@@ -506,7 +506,7 @@ button {
   left: 0;
   right: 0;
   z-index: 1;
-  border-radius: calc(40px);
+  border-radius: 40px 0 0 0;
   background-color: #fff;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -529,7 +529,7 @@ button {
           align-items: center;
   gap: 2em;
   padding: 2em;
-  border-radius: calc(40px) 0 0 0;
+  border-radius: 40px 0 0 0;
   background-color: #fff;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);

@@ -190,7 +190,7 @@ if (!Admin::hasAccess()) {
         <h1>Img</h1>
         <input type="file" name="img" required>
         <br><br>
-        <h1>Numele persoanei(daca vr sa pui link vei scrie &lt;a href="linkul catre el"&gt Numele lui &lt;/a&gt )</h1>
+        <h1>Numele persoanei(daca vr sa pui link vei scrie &lt;a href="linkul catre el" target="_blank" &gt Numele lui &lt;/a&gt )</h1>
         <input type="text" name="user" required>
         <br><br>
 

@@ -209,6 +209,24 @@ if (!Admin::hasAccess()) {
         <input type="submit" name="submit" value="submit">
     </form>
 
+    <br><br><br><br><br>
+
+    <form action="admin.api.php">
+        <h1>Alege sezonul pe care vrei sa il stergi</h1>
+        <select name="sezon" required>
+            <?php
+            $sezoane = $db->get("sezoane", array("id", ">=", "0"));
+            $sezoane = $sezoane->results();
+            foreach ($sezoane as $sezon) {
+                echo "<option value='" . $sezon->id . "'>"
+                    . $sezon->tema . "</option>";
+            }
+            ?>
+        </select>
+        <input type="submit" name="sezon" value="submit">
+
+    </form>
+
     <br><br><br><br>
     <?php
     $posts = $db->get("posts", array('id', ">=", "0"));

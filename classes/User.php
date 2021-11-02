@@ -97,7 +97,8 @@ class User
         return false;
     }
 
-    public function likeCheck($post_id, $user_id){
+    public function likeCheck($post_id, $user_id)
+    {
         $users = $this->_db->get("posts", array("id", "=", $post_id))->first()->users;
         $ids = json_decode($users);
 
@@ -107,6 +108,24 @@ class User
             }
         }
         return false;
+    }
 
+    public function deleteSezon($id)
+    {
+        $sezon = $this->_db->get("sezoane", array("id", "=", $id));
+        $sezon = $sezon->first();
+
+        $posts = $this->_db->get("posts", array("sezon", "=", $sezon->tema));
+        $posts = $posts->results();
+
+        foreach ($posts as $post) {
+            $this->_db->delete("posts", array("id", "=", $post->id));
+        }
+
+        if ($this->_db->delete("sezoane", array("id", "=", $id))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

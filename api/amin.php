@@ -3,7 +3,7 @@ require_once '../core/init.php';
 
 if (isset($_POST['submitpoze'])) {
 
-    Input::moveImg(array("imgfirst", "imgsecond", "imgthird", "imgdoi", "imgabout", "imgfooter1", "imgfooter2"));
+    Input::moveImg(array("imgfirst", "imgsecond", "imgthird", "imgdoi", "imgabout", "imgfooter1", "imgfooter2", "loginimg"));
 
     $admin = new Admin();
     $id = $admin->getId();
@@ -18,6 +18,8 @@ if (isset($_POST['submitpoze'])) {
         "imgabout" => "./assets/img/" . $_FILES['imgabout']['name'],
         "imgfooter1" => "./assets/img/" . $_FILES['imgfooter1']['name'],
         "imgfooter2" => "./assets/img/" . $_FILES['imgfooter2']['name'],
+        
+        "loginimg" => "./assets/img/" . $_FILES['loginimg']['name'],
 
     ));
 

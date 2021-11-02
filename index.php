@@ -8,6 +8,7 @@ $settings = $settings->first();
 $user = new User();
 $txt2Modif = explode(" ", $settings->textdoi);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

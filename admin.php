@@ -74,6 +74,7 @@ $settings = $settings->first();
         <input type="file" name="imgabout" placeholder="imgabout" value="<?php echo $settings->imgabout ?>">
         <input type="file" name="imgfooter1" placeholder="imgfooter1" value="<?php echo $settings->imgfooter1 ?>">
         <input type="file" name="imgfooter2" placeholder="imgfooter2" value="<?php echo $settings->imgfooter2 ?>">
+        <input type="file" name="loginimg" placeholder="loginimg" value="<?php echo $settings->loginimg ?>">
 
         <input type="submit" name="submitpoze" value="Submit poze">
     </form>

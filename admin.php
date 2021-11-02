@@ -6,7 +6,7 @@ $db = DB::getInstance();
 $settings = $db->get("settings", array("id", ">=", "1"));
 $settings = $settings->first();
 
-if(!Admin::hasAccess()){
+if (!Admin::hasAccess()) {
     Redirect::to("redirect.php");
 }
 
@@ -22,6 +22,7 @@ if(!Admin::hasAccess()){
     <link rel="stylesheet" href="assets/scss/styles.css">
     <script src="https://kit.fontawesome.com/2647a8e79d.js" crossorigin="anonymous"></script>
     <title>FotoClubCNCH - admin -</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -52,24 +53,97 @@ if(!Admin::hasAccess()){
             <input type="text" name="downfirst" placeholder="downfirst" value="<?php echo $settings->downfirst ?>">
         </div>
 
-        <input type="text" name="upsecond" placeholder="upsecond" value="<?php echo $settings->upsecond ?>">
-        <input type="text" name="middlesecond" placeholder="middlesecond" value="<?php echo $settings->middlesecond ?>">
-        <input type="text" name="downsecond" placeholder="downsecond" value="<?php echo $settings->downsecond ?>">
-        <input type="text" name="upthird" placeholder="upthird" value="<?php echo $settings->upthird ?>">
-        <input type="text" name="middlethird" placeholder="middlethird" value="<?php echo $settings->middlethird ?>">
-        <input type="text" name="downthird" placeholder="downthird" value="<?php echo $settings->downthird ?>">
-        <input type="text" name="textdoi" placeholder="textdoi" value="<?php echo $settings->textdoi ?>">
-        <input type="text" name="buttondoi" placeholder="buttondoi" value="<?php echo $settings->buttondoi ?>">
-        <input type="text" name="titabout" placeholder="titabout" value="<?php echo $settings->titabout ?>">
-        <input type="text" name="textabout" placeholder="textabout" value="<?php echo $settings->textabout ?>">
-        <input type="text" name="buttonabout" placeholder="buttonabout" value="<?php echo $settings->buttonabout ?>">
-        <input type="text" name="background" placeholder="background" value="<?php echo $settings->background ?>">
-        <input type="text" name="secondcolor" placeholder="secondcolor" value="<?php echo $settings->secondcolor ?>">
+        <div class="form-group">
+            <label for="upsecond">upsecond</label>
+            <input type="text" name="upsecond" placeholder="upsecond" value="<?php echo $settings->upsecond ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="middlesecond">middlesecond</label>
+            <input type="text" name="middlesecond" placeholder="middlesecond" value="<?php echo $settings->middlesecond ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="downsecond">downsecond</label>
+            <input type="text" name="downsecond" placeholder="downsecond" value="<?php echo $settings->downsecond ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="upthird">upthird</label>
+            <input type="text" name="upthird" placeholder="upthird" value="<?php echo $settings->upthird ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="middlethird">middlethird</label>
+            <input type="text" name="middlethird" placeholder="middlethird" value="<?php echo $settings->middlethird ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="downthird">downthird</label>
+            <input type="text" name="downthird" placeholder="downthird" value="<?php echo $settings->downthird ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="textdoi">textdoi</label>
+            <input type="text" name="textdoi" placeholder="textdoi" value="<?php echo $settings->textdoi ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="buttondoi">buttondoi</label>
+            <input type="text" name="buttondoi" placeholder="buttondoi" value="<?php echo $settings->buttondoi ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="titabout">titabout</label>
+            <input type="text" name="titabout" placeholder="titabout" value="<?php echo $settings->titabout ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="textabout">textabout</label>
+            <input type="text" name="textabout" placeholder="textabout" value="<?php echo $settings->textabout ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="buttonabout">buttonabout</label>
+            <input type="text" name="buttonabout" placeholder="buttonabout" value="<?php echo $settings->buttonabout ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="background">background</label>
+            <input type="text" name="background" placeholder="background" value="<?php echo $settings->background ?>">
+
+        </div>
+
+        <div class="form-group">
+            <label for="secondcolor">secondcolor</label>
+            <input type="text" name="secondcolor" placeholder="secondcolor" value="<?php echo $settings->secondcolor ?>">
+
+        </div>
+
         <input type="submit" name="submit" value="submit">
     </form>
     <br><br><br><br>
     <form action="api/amin.php" method="POST" enctype="multipart/form-data">
-        <input type="file" name="imgfirst" placeholder="imgfirst" value="<?php echo $settings->imgfirst ?>">
+
+        <div class="custom-file">
+            <input type="file" name="imgfirst"   value="<?php echo $settings->imgfirst ?>">
+            <label class="custom-file-label" for="imgfirst">Choose file...</label>
+        </div>
+
+
+
+
         <input type="file" name="imgsecond" placeholder="imgsecond" value="<?php echo $settings->imgsecond ?>">
         <input type="file" name="imgthird" placeholder="imgthird" value="<?php echo $settings->imgthird ?>">
         <input type="file" name="imgdoi" placeholder="imgdoi" value="<?php echo $settings->imgdoi ?>">

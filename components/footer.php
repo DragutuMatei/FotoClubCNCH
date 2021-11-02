@@ -9,14 +9,11 @@
             <p class="footer__description">“In photography there is a reality so subtle that it becomes more real than reality.” <br> by Alfred Stieglitz</p>
 
             <div class="footer__social">
-                <a style="background: <?php echo $settings->secondcolor; ?>" href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                <a style="background: <?php echo $settings->secondcolor; ?>" href="https://www.facebook.com/groups/CNCHOGAS" target="_blank" class="footer__social-link">
                     <i class='bx bxl-facebook'></i>
                 </a>
-                <a style="background: <?php echo $settings->secondcolor; ?>" href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                <a style="background: <?php echo $settings->secondcolor; ?>" href="https://www.instagram.com/csecnch/" target="_blank" class="footer__social-link">
                     <i class='bx bxl-instagram-alt'></i>
-                </a>
-                <a style="background: <?php echo $settings->secondcolor; ?>" href="https://twitter.com/" target="_blank" class="footer__social-link">
-                    <i class='bx bxl-twitter'></i>
                 </a>
             </div>
         </div>
@@ -25,6 +22,9 @@
             <h3 class="footer__title">Links</h3>
 
             <ul class="footer__links">
+                <li>
+                    <a href="index.php#" class="footer__link">Home</a>
+                </li>
                 <li>
                     <a href="index.php#about" class="footer__link">About</a>
                 </li>

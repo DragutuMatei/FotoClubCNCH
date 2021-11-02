@@ -13,7 +13,7 @@ if (!Admin::hasAccess()) {
 ?>
 <!DOCTYPE html>
 
-<html lang="en">;
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -133,6 +133,7 @@ if (!Admin::hasAccess()) {
 
         <input type="submit" name="submit" value="submit">
     </form>
+    <hr>
     <br><br><br><br>
     <form action="api/amin.php" method="POST" enctype="multipart/form-data">
         <h1>Prima img</h1>
@@ -169,6 +170,8 @@ if (!Admin::hasAccess()) {
 
         <input type="submit" name="submitpoze" value="Submit poze">
     </form>
+    <hr>
+
     <br><br><br><br>
 
     <form action="api/sezon.php" method="POST" enctype="multipart/form-data">
@@ -180,6 +183,7 @@ if (!Admin::hasAccess()) {
         <br><br>
         <input type="submit" name="submit" value="Submit">
     </form>
+    <hr>
 
     <br><br><br><br>
     <form action="api/post.php" method="POST" enctype="multipart/form-data">
@@ -208,6 +212,7 @@ if (!Admin::hasAccess()) {
         <br><br>
         <input type="submit" name="submit" value="submit">
     </form>
+    <hr>
 
     <br><br><br><br><br>
 
@@ -226,6 +231,7 @@ if (!Admin::hasAccess()) {
         <input type="submit" name="sezonsubmit" value="submit">
 
     </form>
+    <hr>
 
     <br><br><br><br>
     <?php

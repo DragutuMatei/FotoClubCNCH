@@ -9,6 +9,6 @@ if (isset($_POST['submit'])) {
     } else {
         Session::put("notadmin", true);
     }
-    Redirect::to("redirect.php");
+    Redirect::to("../redirect.php");
 
 }

@@ -135,40 +135,67 @@ if (!Admin::hasAccess()) {
     </form>
     <br><br><br><br>
     <form action="api/amin.php" method="POST" enctype="multipart/form-data">
+        <h1>Prima img</h1>
+        <input type="file" name="imgfirst" placeholder="imgfirst" value="<?php echo $settings->imgfirst ?>">
+        <br><br>
 
-        <div class="custom-file">
-            <input type="file" name="imgfirst"   value="<?php echo $settings->imgfirst ?>">
-            <label class="custom-file-label" for="imgfirst">Choose file...</label>
-        </div>
-
-
-
-
+        <h1>A doua img</h1>
         <input type="file" name="imgsecond" placeholder="imgsecond" value="<?php echo $settings->imgsecond ?>">
+        <br><br>
+
+        <h1>A treia img</h1>
         <input type="file" name="imgthird" placeholder="imgthird" value="<?php echo $settings->imgthird ?>">
+        <br><br>
+
+        <h1>Urm img</h1>
         <input type="file" name="imgdoi" placeholder="imgdoi" value="<?php echo $settings->imgdoi ?>">
+        <br><br>
+
+        <h1>About img</h1>
         <input type="file" name="imgabout" placeholder="imgabout" value="<?php echo $settings->imgabout ?>">
+        <br><br>
+
+        <h1>Prima img footer</h1>
         <input type="file" name="imgfooter1" placeholder="imgfooter1" value="<?php echo $settings->imgfooter1 ?>">
+        <br><br>
+
+        <h1>A doua img footer</h1>
         <input type="file" name="imgfooter2" placeholder="imgfooter2" value="<?php echo $settings->imgfooter2 ?>">
+        <br><br>
+
+        <h1>login img</h1>
         <input type="file" name="loginimg" placeholder="loginimg" value="<?php echo $settings->loginimg ?>">
+        <br><br>
 
         <input type="submit" name="submitpoze" value="Submit poze">
     </form>
     <br><br><br><br>
 
     <form action="api/sezon.php" method="POST" enctype="multipart/form-data">
-        <input type="text" name="tema">
+        <h1>Tema sezonului</h1>
+        <input type="text" name="tema" placeholder="tema sezonului">
+        <br><br>
+        <h1>Poza pt sezon</h1>
         <input type="file" name="poza">
+        <br><br>
         <input type="submit" name="submit" value="Submit">
     </form>
 
     <br><br><br><br>
     <form action="api/post.php" method="POST" enctype="multipart/form-data">
-        <input type="file" name="img">
-        <input type="text" name="user">
-        <textarea name="descriere" cols="30" rows="10"></textarea>
+        <h1>Img</h1>
+        <input type="file" name="img" required>
+        <br><br>
+        <h1>Numele persoanei(daca vr sa pui link vei scrie &lt;a href="linkul catre el"&gt Numele lui &lt;/a&gt )</h1>
+        <input type="text" name="user" required>
+        <br><br>
 
-        <select name="sezon">
+        <h1>O scurta descriere a pozei</h1>
+        <textarea name="descriere" cols="30" rows="10" required></textarea>
+        <br><br>
+
+        <h1>Alege sezonul</h1>
+        <select name="sezon" required>
             <?php
             $sezoane = $db->get("sezoane", array("id", ">=", "0"));
             $sezoane = $sezoane->results();
@@ -178,6 +205,7 @@ if (!Admin::hasAccess()) {
             }
             ?>
         </select>
+        <br><br>
         <input type="submit" name="submit" value="submit">
     </form>
 

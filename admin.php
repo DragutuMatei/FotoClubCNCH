@@ -211,7 +211,7 @@ if (!Admin::hasAccess()) {
 
     <br><br><br><br><br>
 
-    <form action="admin.api.php">
+    <form action="api/admin.api.php" method="POST">
         <h1>Alege sezonul pe care vrei sa il stergi</h1>
         <select name="sezon" required>
             <?php

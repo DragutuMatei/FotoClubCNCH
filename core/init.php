@@ -1,12 +1,22 @@
 <?php
 session_start();
 
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"], 1);
+$active_group = 'default';
+$query_builder = TRUE;
+
+
+
 $GLOBALS['config'] = array(
-    "mysql" => array(
-        'host' => '127.0.0.1',
-        "username" => 'root',
-        'password' => '',
-        'db' => 'alina'
+    'mysql' => array(
+        'host' => $cleardb_server,
+        "username" => $cleardb_username,
+        'password' => $cleardb_password,
+        'db' => 'heroku_81e42f634c069bd'
     ),
     'session' => array(
         'session_name' => 'user',

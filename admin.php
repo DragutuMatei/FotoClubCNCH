@@ -1,12 +1,14 @@
 <?php
 require_once './core/init.php';
 
-//trifan1alina2smecer3 - parola
-
 $db = DB::getInstance();
 
 $settings = $db->get("settings", array("id", ">=", "1"));
 $settings = $settings->first();
+
+if(!Admin::hasAccess()){
+    Redirect::to("redirect.php");
+}
 
 ?>
 <!DOCTYPE html>

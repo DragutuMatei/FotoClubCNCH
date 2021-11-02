@@ -13,6 +13,15 @@ class Admin
         return $this->_db->get("settings", array("id", ">=", "0"))->first()->id;
     }
 
+    public static function hasAccess()
+    {
+        if (Session::get("admin")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function editSite($id, $fields = array())
     {
         /** 
@@ -37,21 +46,21 @@ class Admin
         }
     }
 
-    public function addPost($fields = array()){
+    public function addPost($fields = array())
+    {
         if ($this->_db->insert("posts", $fields)) {
             return true;
         } else {
             return false;
         }
     }
-    
-    public function deletePost($fields = array()){
+
+    public function deletePost($fields = array())
+    {
         if ($this->_db->delete("posts", $fields)) {
             return true;
         } else {
             return false;
         }
     }
-
-
 }

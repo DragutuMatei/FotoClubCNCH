@@ -39,6 +39,7 @@ $user = new User();
             <a href="register.php">Nu ai cont? Înregistrează-te </a>
         </form>
     </div>
+    <?php require_once './components/footer.php'; ?>
 
 </body>
 

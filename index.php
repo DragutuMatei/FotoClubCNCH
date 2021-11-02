@@ -49,7 +49,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
                                 </p>
 
                                 <div class="home__buttons">
-                                    <a href="#" class="button"><?php echo $settings->buttonfirst; ?></a>
+                                    <a href="sezoane.php" class="button"><?php echo $settings->buttonfirst; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
                                 </p>
 
                                 <div class="home__buttons">
-                                    <a href="#" class="button"><?php echo $settings->buttonfirst; ?></a>
+                                    <a href="sezoane.php" class="button"><?php echo $settings->buttonfirst; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
                                 </p>
 
                                 <div class="home__buttons">
-                                    <a href="#" class="button"><?php echo $settings->buttonfirst; ?></a>
+                                    <a href="sezoane.php" class="button"><?php echo $settings->buttonfirst; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
                                                     }
                                                 }
                                                 ?></h2>
-                    <a href="#" class="button"><?php echo $settings->buttondoi; ?></a>
+                    <a href="sezoane.php" class="button"><?php echo $settings->buttondoi; ?></a>
                 </div>
 
                 <img src="<?php echo $settings->imgdoi ?>" alt="" class="discount__img">
@@ -155,7 +155,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
                     <p class="about__description">
                         <?php echo $settings->textabout; ?>
                     </p>
-                    <a href="#" class="button"><?php echo $settings->buttonabout;  ?></a>
+                    <a href="sezoane.php" class="button"><?php echo $settings->buttonabout;  ?></a>
                 </div>
 
                 <img src="<?php echo $settings->imgabout ?>" alt="" class="about__img">
@@ -344,7 +344,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
             <div class="newsletter__container container">
                 <h2 class="section__title">Our Newsletter</h2>
                 <p class="newsletter__description">
-                    Promotion new products and sales. Directly to your inbox
+                    Abonează-te si vei primi un email când e postată o fotografie
                 </p>
 
                 <form action="" class="newsletter__form" style="background: <?php echo $settings->secondcolor; ?>">
@@ -358,83 +358,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer section">
-        <div class="footer__container container grid">
-            <div class="footer__content">
-                <a href="#" class="footer__logo">
-                    <img src="assets/img/logo.png" alt="" class="footer__logo-img">
-                    Halloween
-                </a>
-
-                <p class="footer__description">Enjoy the scariest night <br> of your life.</p>
-
-                <div class="footer__social">
-                    <a style="background: <?php echo $settings->secondcolor; ?>" href="https://www.facebook.com/" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-facebook'></i>
-                    </a>
-                    <a style="background: <?php echo $settings->secondcolor; ?>" href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a style="background: <?php echo $settings->secondcolor; ?>" href="https://twitter.com/" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-twitter'></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">About</h3>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#" class="footer__link">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Features</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">News</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Our Services</h3>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#" class="footer__link">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Discounts</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Shipping mode</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Our Company</h3>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#" class="footer__link">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">About us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Our mision</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <span class="footer__copy">&#169; Bedimcode. All rigths reserved</span>
-
-        <img src="<?php echo $settings->imgfooter1 ?>" alt="" class="footer__img-one">
-        <img src="<?php echo $settings->imgfooter2 ?>" alt="" class="footer__img-two">
-    </footer>
+<?php require_once './components/footer.php'; ?>
 
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up" style="background: <?php echo $settings->secondcolor; ?>">

@@ -101,6 +101,7 @@ $user = new User();
             ?>
         </div>
     </main>
+    <?php require_once './components/footer.php'; ?>
 
 </body>
 

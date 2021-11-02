@@ -46,6 +46,7 @@ $user = new User();
             ?>
         </form>
     </div>
+    <?php require_once './components/footer.php'; ?>
 
 
 </body>

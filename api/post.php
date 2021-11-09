@@ -36,7 +36,7 @@ require_once '../classes/Session.php';
 
 require_once '../classes/Admin.php';
 
-use Cloudinary\Api\Upload\UploadApi;
+// use Cloudinary\Api\Upload\UploadApi;
 
 
 

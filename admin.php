@@ -1,6 +1,6 @@
 <?php
 require_once './core/init.php';
-require_once '../initCloudinary.php';
+require_once './initCloudinary.php';
 
 $db = DB::getInstance();
 

@@ -4,11 +4,11 @@ require_once '../core/init.php';
 if (isset($_POST['submit'])) {
     $admin = new Admin();
 
-    Input::moveImg(array(Input::getFILE('poza')['name']));
+    $img = Input::moveImg("alina/sezon/", array("poza"));
 
     $rez = $admin->addSezon(array(
         "tema" => Input::get("tema"),
-        "poza" => "./assets/img/" . Input::getFILE('poza')['name']
+        "poza" => $img[0],
     ));
 
     $path = "../admin.php?success=";

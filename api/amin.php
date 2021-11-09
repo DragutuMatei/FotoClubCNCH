@@ -3,25 +3,36 @@ require_once '../core/init.php';
 
 if (isset($_POST['submitpoze'])) {
 
-    Input::moveImg(array("imgfirst", "imgsecond", "imgthird", "imgdoi", "imgabout", "imgfooter1", "imgfooter2", "loginimg"));
-
+    $imgs = Input::moveImg("alina/settings/", array("imgfirst", "imgsecond", "imgthird", "imgdoi", "imgabout", "imgfooter1", "imgfooter2", "loginimg"));
 
 
     $admin = new Admin();
     $id = $admin->getId();
 
     $rez = $admin->editSite($id, array(
-        "imgfirst" => "./assets/img/" . $_FILES['imgfirst']['name'],
-        "imgsecond" =>  "./assets/img/" . $_FILES['imgsecond']['name'],
+        // "imgfirst" => "./assets/img/" . $_FILES['imgfirst']['name'],
+        // "imgsecond" =>  "./assets/img/" . $_FILES['imgsecond']['name'],
 
-        "imgthird" =>  "./assets/img/" . $_FILES['imgthird']['name'],
-        "imgdoi" => "./assets/img/" . $_FILES['imgdoi']['name'],
+        // "imgthird" =>  "./assets/img/" . $_FILES['imgthird']['name'],
+        // "imgdoi" => "./assets/img/" . $_FILES['imgdoi']['name'],
 
-        "imgabout" => "./assets/img/" . $_FILES['imgabout']['name'],
-        "imgfooter1" => "./assets/img/" . $_FILES['imgfooter1']['name'],
-        "imgfooter2" => "./assets/img/" . $_FILES['imgfooter2']['name'],
-        
-        "loginimg" => "./assets/img/" . $_FILES['loginimg']['name'],
+        // "imgabout" => "./assets/img/" . $_FILES['imgabout']['name'],
+        // "imgfooter1" => "./assets/img/" . $_FILES['imgfooter1']['name'],
+        // "imgfooter2" => "./assets/img/" . $_FILES['imgfooter2']['name'],
+
+        // "loginimg" => "./assets/img/" . $_FILES['loginimg']['name'],
+
+        "imgfirst" => $imgs[0],
+        "imgsecond" =>  $imgs[1],
+
+        "imgthird" =>  $imgs[2],
+        "imgdoi" => $imgs[3],
+
+        "imgabout" => $imgs[4],
+        "imgfooter1" => $imgs[5],
+        "imgfooter2" => $imgs[6],
+
+        "loginimg" => $imgs[7],
 
     ));
 

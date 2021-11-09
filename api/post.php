@@ -9,7 +9,7 @@ require_once '../classes/User.php';
 require_once '../classes/Session.php';
 
 require_once '../classes/Admin.php';
-require_once '../classes/Config.php';
+// require_once '../classes/Config.php';
 
 use Cloudinary\Api\Upload\UploadApi;
 

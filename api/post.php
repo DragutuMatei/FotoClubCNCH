@@ -36,8 +36,8 @@ require_once '../classes/Session.php';
 
 require_once '../classes/Admin.php';
 
-// use Cloudinary\Api\Upload\UploadApi;
-
+require_once '../initCloudinary.php';
+use Cloudinary\Api\Upload\UploadApi;
 
 
 if (isset($_POST['submit'])) {
@@ -45,20 +45,11 @@ if (isset($_POST['submit'])) {
     $admin = new Admin();
 
 
-    // \Cloudinary\Uploader::upload(
-    //     $_FILES['img']['tmp_name'],
-    //     array(
-    //         "public_id" => 'a'
-    //     )
-    // );
-
-    // $up = new UploadApi();
-    // $up->upload('../assets/img/work3.jpeg', array(
-    //     "public_id"=>"alina"
-    // ));
-
-
-    print_r($up);
+    $r = new UploadApi();
+    $r = $r->upload($_FILES['img']['tmp_name'], ['folder' => 'alina']);
+    
+    
+    print_r($r['secure_url']);
 
     try {
         $rez =   $admin->addPost(array(

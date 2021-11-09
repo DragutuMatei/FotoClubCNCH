@@ -358,7 +358,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
     </main>
 
     <!--==================== FOOTER ====================-->
-<?php require_once './components/footer.php'; ?>
+    <?php require_once './components/footer.php'; ?>
 
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up" style="background: <?php echo $settings->secondcolor; ?>">

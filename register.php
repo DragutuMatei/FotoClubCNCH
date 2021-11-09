@@ -31,7 +31,7 @@ $user = new User();
 
     <div class="all" style="background: url(<?php echo $settings->loginimg; ?>); background-position: center right;">
         <form style="background: <?php echo $settings->background ?>" class="left" action="api/register.php" method="POST">
-            <h1>Regiter</h1>
+            <h1>Register</h1>
             <input type="text" name="username" placeholder="Username">
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="password1" placeholder="Parola">

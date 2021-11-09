@@ -50,7 +50,11 @@ $user = new User();
                     <div class="card__overlay">
                         <div class="card__header">
                             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                            <img class="card__thumb" src="assets/img/user.svg" alt="" />
+                            <img class="card__thumb" src="assets/img/';
+                if ($post->gen == "m")
+                    echo "m";
+                else echo "f";
+                echo '.svg" alt="" />
                             <div class="card__header-text">
                                 <h3 class="card__title">' . $post->user . '</h3>';
                 if ($user->isLoggedIn())

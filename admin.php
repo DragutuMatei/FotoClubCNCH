@@ -197,6 +197,13 @@ if (!Admin::hasAccess()) {
         <textarea name="descriere" cols="30" rows="10" required></textarea>
         <br><br>
 
+        <h1>Alege genul</h1>
+        <select name="gen" required>
+            <option value="m">Baiat</option>
+            <option value="f">Fata</option>
+        </select>
+
+
         <h1>Alege sezonul</h1>
         <select name="sezon" required>
             <?php

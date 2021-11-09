@@ -13,7 +13,8 @@ if (isset($_POST['submit'])) {
             "user" => Input::get("user"),
             "sezon" => Input::get("sezon"),
             "descriere" => Input::get("descriere"),
-            "users" => "[]"
+            "users" => "[]",
+            "gen"=>Input::get("gen")
         ));
         $path = "../admin.php?success=";
 

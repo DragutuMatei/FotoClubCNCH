@@ -10,7 +10,6 @@ $txt2Modif = explode(" ", $settings->textdoi);
 
 $linksSez = $db->get("sezoane", array("id", ">=", "1"));
 $linksSez = $linksSez->results()[count($linksSez) - 1];
-
 ?>
 
 <!DOCTYPE html>

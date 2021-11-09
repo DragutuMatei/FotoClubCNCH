@@ -1,6 +1,8 @@
 <?php
-require_once '../core/init.php';
+// require_once '../core/init.php';
 // require_once '../initCloudinary.php';
+require_once '../classes/Admin.php';
+require_once '../classes/Input.php';
 
 use Cloudinary\Api\Upload\UploadApi;
 

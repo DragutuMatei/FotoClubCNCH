@@ -7,6 +7,10 @@ $settings = $db->get("settings", array("id", ">=", "1"));
 $settings = $settings->first();
 $user = new User();
 $txt2Modif = explode(" ", $settings->textdoi);
+
+$linksSez = $db->get("sezoane", array("id", ">=", "1"));
+$linksSez = $linksSez->results()[count($linksSez) - 1];
+
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +76,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
                                 </p>
 
                                 <div class="home__buttons">
-                                    <a href="sezoane.php" class="button"><?php echo $settings->buttonfirst; ?></a>
+                                    <a href="posts.php?sezon=<?php echo $linksSez; ?>" class="button"><?php echo $settings->buttonfirst; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +99,7 @@ $txt2Modif = explode(" ", $settings->textdoi);
                                 </p>
 
                                 <div class="home__buttons">
-                                    <a href="sezoane.php" class="button"><?php echo $settings->buttonfirst; ?></a>
+                                    <a href="posts.php?sezon=<?php echo $linksSez; ?>" class="button"><?php echo $settings->buttonfirst; ?></a>
                                 </div>
                             </div>
                         </div>

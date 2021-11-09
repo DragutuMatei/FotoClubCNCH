@@ -21,14 +21,11 @@ $linksSez = $linksSez->results()[count($linksSez) - 1];
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/scss/styles.css">
     <title>FotoClubCNCH</title>
 </head>
 
 <body style="background: <?php echo $settings->background ?>">
-
     <?php require_once './components/navbar.php'; ?>
 
     <main class="main">
@@ -40,7 +37,6 @@ $linksSez = $linksSez->results()[count($linksSez) - 1];
                         <div class="home__content grid">
                             <div class="home__group">
                                 <img src="<?php echo $settings->imgfirst ?>" alt="" class="home__img">
-
                                 <div class="home__details-img">
                                 </div>
                             </div>

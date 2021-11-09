@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
 
 
     $r = new UploadApi();
-    $r = $r->upload($_FILES['img']['tmp_name'], ['folder' => 'alina']);
+    $r = $r->upload($_FILES['img']['tmp_name'], ['folder' => 'alina/postari/']);
     
     
     try {

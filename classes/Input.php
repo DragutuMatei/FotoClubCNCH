@@ -1,4 +1,8 @@
 <?php
+require_once '../initCloudinary.php';
+
+use Cloudinary\Api\Upload\UploadApi;
+
 class Input
 {
     public static function exists($type = "post")
@@ -34,12 +38,14 @@ class Input
         return '';
     }
 
-    public static function moveImg($names = array())
+    public static function moveImg($folder, $names = array())
     {
-        foreach ($names as $name)
-            move_uploaded_file(
-                $_FILES[$name]["tmp_name"],
-                "../assets/img/" . $_FILES[$name]['name']
-            );
+        $r = new UploadApi();
+        $urls = array();
+        foreach ($names as $name) {
+            $r = $r->upload($_FILES[$name]['tmp_name'], ['folder' => $folder]);
+            array_push($urls, $r['secure_url']);
+        }
+        return $urls;
     }
 }

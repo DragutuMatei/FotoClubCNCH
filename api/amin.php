@@ -5,6 +5,8 @@ if (isset($_POST['submitpoze'])) {
 
     Input::moveImg(array("imgfirst", "imgsecond", "imgthird", "imgdoi", "imgabout", "imgfooter1", "imgfooter2", "loginimg"));
 
+
+
     $admin = new Admin();
     $id = $admin->getId();
 

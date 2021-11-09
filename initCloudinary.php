@@ -12,9 +12,9 @@ Configuration::instance([
 
       use Cloudinary\Api\Upload\UploadApi;
 $r = new UploadApi();
-$r = $r->upload($_FILES['img']['tmp_name']);
+$r = $r->upload($_FILES['img']['tmp_name'], ['folder'=>'alina']);
 echo '<pre>';
-print_r($r);
+print_r($r['secure_url']);
 echo '</pre>';
 // /Cloudinary::config([ 
 //     "cloud_name" => "thobor", 

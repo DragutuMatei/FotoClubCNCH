@@ -11,8 +11,10 @@ Configuration::instance([
       'secure' => true]]);
 
       use Cloudinary\Api\Upload\UploadApi;
-(new UploadApi())->upload($_FILES['img']['tmp_name'])
+$r = new UploadApi();
+$r = $r->upload($_FILES['img']['tmp_name']);
 
+print_r($r);
 // /Cloudinary::config([ 
 //     "cloud_name" => "thobor", 
 //     "api_key" => "745867666258536", 

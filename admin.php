@@ -185,8 +185,9 @@ if (!Admin::hasAccess()) {
     </form>
     <hr>
 
-    <br><br><br><br>
-    <form action="api/post.php" method="POST" enctype="multipart/form-data">
+    <br><br><br><br>initCloudinary.php
+    <!-- <form action="api/post.php" method="POST" enctype="multipart/form-data"> -->
+    <form action="initCloudinary.php" method="POST" enctype="multipart/form-data">
         <h1>Img</h1>
         <input type="file" name="img" required>
         <br><br>

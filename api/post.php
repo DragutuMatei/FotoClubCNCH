@@ -52,10 +52,10 @@ if (isset($_POST['submit'])) {
     //     )
     // );
 
-    $up = new UploadApi();
-    $up->upload('../assets/img/work3.jpeg', array(
-        "public_id"=>"alina"
-    ));
+    // $up = new UploadApi();
+    // $up->upload('../assets/img/work3.jpeg', array(
+    //     "public_id"=>"alina"
+    // ));
 
 
     print_r($up);

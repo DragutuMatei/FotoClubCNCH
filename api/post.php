@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     // );
 
     $up = new UploadApi();
-    $up->upload($_FILES['img']['tmp_name'], array(
+    $up->upload('../assets/img/work3.jpeg', array(
         "public_id"=>"alina"
     ));
 

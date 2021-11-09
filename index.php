@@ -141,7 +141,6 @@ $linksSez = $linksSez[count($linksSez) - 1]->tema;
                                                     }
                                                 }
                                                 ?></h2>
-                    <a href="sezoane.php" class="button"><?php echo $settings->buttondoi; ?></a>
                 </div>
 
                 <img src="<?php echo $settings->imgdoi ?>" alt="" class="discount__img">
@@ -155,7 +154,6 @@ $linksSez = $linksSez[count($linksSez) - 1]->tema;
                     <p class="about__description">
                         <?php echo $settings->textabout; ?>
                     </p>
-                    <a href="sezoane.php" class="button"><?php echo $settings->buttonabout;  ?></a>
                 </div>
 
                 <img src="<?php echo $settings->imgabout ?>" alt="" class="about__img">

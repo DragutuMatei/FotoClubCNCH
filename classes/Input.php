@@ -43,8 +43,8 @@ class Input
         $r = new UploadApi();
         $urls = array();
         foreach ($names as $name) {
-            $r = $r->upload($_FILES[$name]['tmp_name'], ['folder' => $folder]);
-            array_push($urls, $r['secure_url']);
+            $rez = $r->upload($_FILES[$name]['tmp_name'], ['folder' => $folder]);
+            array_push($urls, $rez['secure_url']);
         }
         return $urls;
     }

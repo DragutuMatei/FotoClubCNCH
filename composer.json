@@ -1,5 +1,5 @@
 {
-    "require": {
-      "cloudinary/cloudinary_php": "alina"
-    }
+  "require": {
+    "cloudinary/cloudinary_php": "^2"
   }
+}

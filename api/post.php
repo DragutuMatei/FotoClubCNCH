@@ -1,6 +1,6 @@
 <?php
 // require_once '../core/init.php';
-// require_once '../initCloudinary.php';
+require_once '../initCloudinary.php';
 
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $cleardb_server = $cleardb_url["host"];

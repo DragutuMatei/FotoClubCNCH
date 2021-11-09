@@ -249,7 +249,7 @@ if (!Admin::hasAccess()) {
         <?php
         foreach ($posts as $post) {
             echo '
-                <div class="card">
+                <div class="card" style="min-height:300px">
                     <img src="' . $post->poza . '" class="card__image" alt="" />
                     <div class="card__overlay">
                         <div class="card__header">

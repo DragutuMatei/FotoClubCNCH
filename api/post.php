@@ -49,11 +49,9 @@ if (isset($_POST['submit'])) {
     $r = $r->upload($_FILES['img']['tmp_name'], ['folder' => 'alina']);
     
     
-    print_r($r['secure_url']);
-
     try {
         $rez =   $admin->addPost(array(
-            "poza" => "./assets/img/" . Input::getFILE("img")['name'],
+            "poza" => $r['secure_url'],
             "user" => Input::get("user"),
             "sezon" => Input::get("sezon"),
             "descriere" => Input::get("descriere"),
@@ -64,7 +62,7 @@ if (isset($_POST['submit'])) {
 
         $rez ? $path .= "true" : $path .= "false";
 
-        // Redirect::to($path);
+        Redirect::to($path);
     } catch (Exception $e) {
         die($e->getMessage());
     }

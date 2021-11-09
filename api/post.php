@@ -3,6 +3,11 @@
 // require_once '../initCloudinary.php';
 require_once '../classes/Admin.php';
 require_once '../classes/Input.php';
+require_once '../classes/DB.php';
+require_once '../classes/Redirect.php';
+require_once '../classes/Session.php';
+require_once '../classes/User.php';
+require_once '../classes/Config.php';
 
 use Cloudinary\Api\Upload\UploadApi;
 

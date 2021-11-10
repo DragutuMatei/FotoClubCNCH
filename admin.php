@@ -255,7 +255,7 @@ if (!Admin::hasAccess()) {
         $posts = $db->get("posts", array('sezon', "=", $sezon->tema));
         $posts = $posts->results();
 
-        echo "<h1>" . $sezon->tema . ":</h1><br>
+        echo "<h1>Sezon " . $sezon->tema . ":</h1><br>
             <div class='cards'>";
         foreach ($posts as $post) {
             echo '

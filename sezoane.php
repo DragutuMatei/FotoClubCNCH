@@ -34,7 +34,7 @@ $user = new User();
         <div class="sezoane">
 
             <?php
-            for ($i = 0; $i < count($sezoane); $i++) {
+            for ($i = count($sezoane)-1; $i >= 0; $i--) {
                 echo '
             <a href="posts.php?sezon=' . $sezoane[$i]->id . '" class="sezon" style="box-shadow: 0 0 10px ' . $settings->secondcolor . '">
                 <img src="' . $sezoane[$i]->poza . '" alt="">

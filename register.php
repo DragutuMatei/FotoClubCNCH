@@ -48,6 +48,8 @@ if ($user->isLoggedIn())
             ?>
         </form>
     </div>
+    <script src="assets/js/main.js"></script>
+
     <?php require_once './components/footer.php'; ?>
 
 

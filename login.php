@@ -39,6 +39,7 @@ if ($user->isLoggedIn())
             <input type="submit" name="submit" value="Submit">
             <a href="register.php">Nu ai cont? Înregistrează-te </a>
         </form>
+    <script src="assets/js/main.js"></script>
     </div>
     <?php require_once './components/footer.php'; ?>
 

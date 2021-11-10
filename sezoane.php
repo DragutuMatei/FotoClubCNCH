@@ -45,6 +45,7 @@ $user = new User();
             ?>
         </div>
     </main>
+    <script src="assets/js/main.js"></script>
 
 <?php require_once './components/footer.php'; ?>
 </body>

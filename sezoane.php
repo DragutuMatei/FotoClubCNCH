@@ -6,7 +6,7 @@ $db = DB::getInstance();
 $settings = $db->get("settings", array("id", ">=", "1"));
 $settings = $settings->first();
 
-$sezoane = $db->get("sezoane", array("id", ">=", "0"));
+$sezoane = $db->get("sezoane", array("id", ">=", "0"), " ORDER BY id DESC");
 $sezoane = $sezoane->results();
 $user = new User();
 

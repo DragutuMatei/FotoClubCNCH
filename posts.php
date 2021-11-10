@@ -9,7 +9,7 @@ $settings = $settings->first();
 $id = $_GET['sezon'];
 $sezon = $db->get("sezoane", array('id', "=", $id));
 $sezon = $sezon->first();
-$posts = $db->get("posts", array('sezon', "=", $sezon->tema));
+$posts = $db->get("posts", array('sezon', "=", $sezon->tema), " ORDER BY id DESC");
 $posts = $posts->results();
 $user = new User();
 ?>

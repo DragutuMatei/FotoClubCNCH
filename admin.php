@@ -209,7 +209,7 @@ if (!Admin::hasAccess()) {
         <h1>Alege sezonul</h1>
         <select name="sezon" required>
             <?php
-            $sezoane = $db->get("sezoane", array("id", ">=", "0"));
+            $sezoane = $db->get("sezoane", array("id", ">=", "0"), " ORDER BY id DESC");
             $sezoane = $sezoane->results();
             foreach ($sezoane as $sezon) {
                 echo "<option value='" . $sezon->tema . "'>"
@@ -228,7 +228,7 @@ if (!Admin::hasAccess()) {
         <h1>Alege sezonul pe care vrei sa il stergi</h1>
         <select name="sezon" required>
             <?php
-            $sezoane = $db->get("sezoane", array("id", ">=", "0"));
+            $sezoane = $db->get("sezoane", array("id", ">=", "0"), " ORDER BY id DESC");
             $sezoane = $sezoane->results();
             foreach ($sezoane as $sezon) {
                 echo "<option value='" . $sezon->id . "'>"
@@ -252,7 +252,7 @@ if (!Admin::hasAccess()) {
 
     foreach ($sezoane as $sezon) {
 
-        $posts = $db->get("posts", array('sezon', "=", $sezon->tema));
+        $posts = $db->get("posts", array('sezon', "=", $sezon->tema), " ORDER BY id DESC");
         $posts = $posts->results();
 
         echo "<h1>Sezon " . $sezon->tema . ":</h1><br>

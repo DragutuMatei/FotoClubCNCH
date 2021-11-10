@@ -38,7 +38,7 @@ $user = new User();
                 echo '
             <a href="posts.php?sezon=' . $sezoane[$i]->id . '" class="sezon" style="box-shadow: 0 0 10px ' . $settings->secondcolor . '">
                 <img src="' . $sezoane[$i]->poza . '" alt="">
-                <h2>Sezon ' . count($sezoane) - $i + 1 . '</h2>
+                <h2>Sezon ' . count($sezoane) - $i . '</h2>
                 <p>tema: ' . $sezoane[$i]->tema . '</p>
             </a>';
             }

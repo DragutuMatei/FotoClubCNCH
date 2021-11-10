@@ -6,7 +6,8 @@ $settings = $db->get("settings", array("id", ">=", "1"));
 $settings = $settings->first();
 
 $user = new User();
-
+if ($user->isLoggedIn())
+    Redirect::to("index.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

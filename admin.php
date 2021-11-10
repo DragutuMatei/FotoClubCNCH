@@ -272,7 +272,7 @@ if (!Admin::hasAccess()) {
                             <div class="card__header-text">
                                 <h3 class="card__title">' . $post->user . '</h3>';
             echo '<span class="card__status">
-                                <p class="card__description">' . count($post->users) . ' likes</p>
+                                <p class="card__description">' . count(json_decode($post->users)) . ' likes</p>
                                 <form action="api/deletepost.php" method="POST">
                                     <input type="hidden" name="post_id" value="' . $post->id . '">
                                     <button style="background:none;" type="submit" name="delete"> <i class="fas fa-trash-alt"></i> </button>

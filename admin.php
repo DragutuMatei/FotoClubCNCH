@@ -95,9 +95,9 @@ if (!Admin::hasAccess()) {
 
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="buttondoi">buttondoi</label>
-            <input type="text" name="buttondoi" placeholder="buttondoi" value="<?php echo $settings->buttondoi ?>">
+            <input type="text" name="buttondoi" placeholder="buttondoi" value="<?php //echo $settings->buttondoi ?>"> -->
 
         </div>
 
@@ -113,11 +113,10 @@ if (!Admin::hasAccess()) {
 
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="buttonabout">buttonabout</label>
-            <input type="text" name="buttonabout" placeholder="buttonabout" value="<?php echo $settings->buttonabout ?>">
-
-        </div>
+            <input type="text" name="buttonabout" placeholder="buttonabout" value="<?php //echo $settings->buttonabout ?>">
+        </div> -->
 
         <div class="form-group">
             <label for="background">background</label>
@@ -256,9 +255,6 @@ if (!Admin::hasAccess()) {
         $posts = $posts->results();
 
         if (count($posts) >= 2) {
-            $max = count(json_decode($posts[0]->users));
-
-
             usort($posts, function($a, $b){
                 if(count(json_decode($a->users)) == count(json_decode($b->users))){
                     return 0;

@@ -187,7 +187,7 @@ if (!Admin::hasAccess()) {
 
     <br><br><br><br>
     <form action="api/post.php" method="POST" enctype="multipart/form-data">
-    <!-- <form action="initCloudinary.php" method="POST" enctype="multipart/form-data"> -->
+        <!-- <form action="initCloudinary.php" method="POST" enctype="multipart/form-data"> -->
         <h1>Img</h1>
         <input type="file" name="img" required>
         <br><br>
@@ -243,12 +243,20 @@ if (!Admin::hasAccess()) {
 
     <br><br><br><br>
     <?php
-    $posts = $db->get("posts", array('id', ">=", "0"));
-    $posts = $posts->results();
+
+
+
     $user = new User();
     ?>
-    <div class="cards">
-        <?php
+    <?php
+
+    foreach ($sezoane as $sezon) {
+
+        $posts = $db->get("posts", array('sezon', "=", $sezon->tema));
+        $posts = $posts->results();
+
+        echo "<h1>" . $sezon->tema . ":</h1><br>
+            <div class='cards'>";
         foreach ($posts as $post) {
             echo '
                 <div class="card" style="min-height:300px">
@@ -257,13 +265,14 @@ if (!Admin::hasAccess()) {
                         <div class="card__header">
                             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
                             <img class="card__thumb" src="assets/img/';
-                            if ($post->gen == "m")
-                                echo "m";
-                            else echo "f";
-                            echo '.svg" alt="" />
+            if ($post->gen == "m")
+                echo "m";
+            else echo "f";
+            echo '.svg" alt="" />
                             <div class="card__header-text">
                                 <h3 class="card__title">' . $post->user . '</h3>';
             echo '<span class="card__status">
+                                <p class="card__description">' . count($post->users) . ' likes</p>
                                 <form action="api/deletepost.php" method="POST">
                                     <input type="hidden" name="post_id" value="' . $post->id . '">
                                     <button style="background:none;" type="submit" name="delete"> <i class="fas fa-trash-alt"></i> </button>
@@ -276,8 +285,13 @@ if (!Admin::hasAccess()) {
                     </div>
                 </div>';
         }
-        ?>
+
+        echo '<div class="linie" style="width:100vw; height:5px; background:black"></div><br><br>
     </div>
+    ';
+    }
+
+    ?>
 </body>
 
 </html>

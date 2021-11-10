@@ -14,7 +14,8 @@ if (isset($_POST['submit'])) {
                 'salt' => Input::get("salt")
             ));
 
-            Redirect::to("../login.php");
+            echo "<script>javascript:history.go(-2);</script>";
+
         } catch (Exception $e) {
             $e->getMessage();
         }

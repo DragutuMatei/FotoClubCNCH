@@ -7,7 +7,8 @@ if (isset($_POST['submit'])) {
 
     try {
         $user->login(Input::get("email"), Input::get("password"));
-        Redirect::to("../index.php");
+        echo "<script>javascript:history.go(-2);</script>";
+
     } catch (Exception $e) {
         $e->getMessage();
     }

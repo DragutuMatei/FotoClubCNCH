@@ -34,11 +34,11 @@ $user = new User();
         <div class="sezoane">
 
             <?php
-            for ($i = count($sezoane)-1; $i >= 0; $i--) {
+            for ($i = 0; $i < count($sezoane); $i++) {
                 echo '
             <a href="posts.php?sezon=' . $sezoane[$i]->id . '" class="sezon" style="box-shadow: 0 0 10px ' . $settings->secondcolor . '">
                 <img src="' . $sezoane[$i]->poza . '" alt="">
-                <h2>Sezon ' . $i + 1 . '</h2>
+                <h2>Sezon ' . count($sezoane) - $i + 1 . '</h2>
                 <p>tema: ' . $sezoane[$i]->tema . '</p>
             </a>';
             }

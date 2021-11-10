@@ -255,6 +255,28 @@ if (!Admin::hasAccess()) {
         $posts = $db->get("posts", array('sezon', "=", $sezon->tema), " ORDER BY id DESC");
         $posts = $posts->results();
 
+        if (count($posts) >= 2) {
+            $max = count(json_decode($posts[0]->users));
+
+
+            usort($posts, function($a, $b){
+                if(count(json_decode($a->users)) == count(json_decode($b->users))){
+                    return 0;
+                }
+                if(count(json_decode($a->users)) < count(json_decode($b->users))){
+                    return 1;
+                } else{
+                    return -1;
+                }
+            } );
+
+            // for ($i = 1; $i < count($posts); $i++) {
+            //     if(count(json_decode($posts[$i]->users)) > $max ){
+                    
+            //     }
+            // }
+        }
+
         echo "<h1>Sezon " . $sezon->tema . ":</h1><br>
             <div class='cards'>";
         foreach ($posts as $post) {
